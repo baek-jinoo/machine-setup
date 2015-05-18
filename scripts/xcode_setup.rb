@@ -25,27 +25,46 @@ def install(name, target_directory, command)
   Dir.chdir current_directory
 end
 
-def install_with_git_repository(name, repository_url)
+def install_with_git_repository(name, repository_url, command)
   target_directory = "/tmp/__installs/#{name}"
   log "Clearing #{target_directory}"
   shell_cmd "rm -rf #{target_directory}"
   clone_git_repository(repository_url, target_directory)
   install_gem('rake')
-  install(name, target_directory, 'rake install')
+  install(name, target_directory, command)
 end
 
 def install_cedar_shortcuts
   name = 'CedarShortcuts'
   repository_url = 'https://github.com/cppforlife/CedarShortcuts.git'
-  install_with_git_repository(name, repository_url)
+  install_with_git_repository(name, repository_url, 'rake install')
 end
 
 def install_better_console
   name = 'BetterConsole'
   repository_url = 'https://github.com/cppforlife/BetterConsole.git'
-  install_with_git_repository(name, repository_url)
+  install_with_git_repository(name, repository_url, 'rake install')
+end
+
+def install_xcode_preferences
+  name = 'XcodePreferences'
+  repository_url = 'https://github.com/baek-jinoo/XcodePreferences.git'
+  install_with_git_repository(name, repository_url, 'rake')
+end
+
+def install_appcode_preferences
+  name = 'AppCodePreferences'
+  repository_url = 'https://github.com/baek-jinoo/AppCodePreferences.git'
+  install_with_git_repository(name, repository_url, 'rake symlink:all')
+end
+
+def install_alcatraz
+  colorize_log "Installing Alcatraz for Xcode"
+  shell_cmd 'curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh'
 end
 
 install_cedar_shortcuts
 install_better_console
-
+install_alcatraz
+install_xcode_preferences
+install_appcode_preferences
