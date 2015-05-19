@@ -1,0 +1,18 @@
+
+PATH=$PATH:$HOME/bin
+PATH=/usr/local/sbin:$PATH
+PATH=/usr/local/bin:$PATH
+
+#Change shell to vim mode
+set -o vi
+
+#Vim
+export EDITOR='/usr/bin/vim'
+
+#Unix Commands
+alias ',,'='vim ~/.bashrc'
+alias 'vi'='vim'
+
+alias tree='tree -C'
+
+alias ss="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &"
