@@ -49,7 +49,6 @@
         cam = commit -am
         cd = commit --amend
         cad = commit -a --amend
-        ced = commit --allow-empty --amend
         #############
         d = diff
         dc = diff --cached
