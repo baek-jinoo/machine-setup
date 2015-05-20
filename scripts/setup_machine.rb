@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require_relative 'vim_setup'
 require_relative 'wget_setup'
 require_relative 'homebrew_setup'
 require_relative 'bashrc_setup'
