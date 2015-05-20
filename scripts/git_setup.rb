@@ -13,4 +13,17 @@ def install_gitconfig
   end
 end
 
+def install_git_branch_autocomplete
+  settings_destination_full_path = "#{ENV['HOME']}/.git-completion.bash"
+  colorize_log 'Attempting to install git branch autocomplete'
+  if !File.symlink?(settings_destination_full_path) && !File.exists?(settings_destination_full_path) then
+    colorize_log 'Installing git branch autocomplete'
+    shell_cmd "curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o #{settings_destination_full_path}"
+    shell_cmd 'echo "if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi" >> ~/.bashrc'
+  else
+    colorize_log 'gitconfig already installed'
+  end
+end
+
 install_gitconfig
+install_git_branch_autocomplete
