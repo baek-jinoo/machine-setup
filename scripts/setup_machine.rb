@@ -3,6 +3,7 @@
 require_relative 'vim_setup'
 require_relative 'wget_setup'
 require_relative 'homebrew_setup'
+require_relative 'alfred_setup'
 require_relative 'bashrc_setup'
 require_relative 'xcode_setup'
 require_relative 'git_setup'

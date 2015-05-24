@@ -63,8 +63,14 @@ def install_alcatraz
   shell_cmd 'curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh'
 end
 
+#def install_dash
+#  colorize_log "Installing Dash"
+#  shell_cmd 'brew cask install dash'
+#end
+
 install_cedar_shortcuts
 install_better_console
 install_alcatraz
 install_xcode_preferences
 install_appcode_preferences
+#install_dash
