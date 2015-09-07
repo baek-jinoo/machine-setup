@@ -58,3 +58,8 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" FuzzyFinder
+nnoremap <silent> <C-f>p     :FufFile<CR>
+nnoremap <silent> <C-f>b     :FufBuffer<CR>
+nnoremap <silent> <C-f>f     :FufCoverageFile<CR>
+

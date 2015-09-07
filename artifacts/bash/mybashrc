@@ -18,3 +18,5 @@ alias tree='tree -C'
 alias ss="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &"
 
 alias be='bundle exec'
+
+eval "$(pyenv init -)"
