@@ -81,3 +81,4 @@ nnoremap <silent> <C-f>p     :FufFile<CR>
 nnoremap <silent> <C-f>b     :FufBuffer<CR>
 nnoremap <silent> <C-f>f     :FufCoverageFile<CR>
 
+map <C-n> :NERDTreeToggle<CR>

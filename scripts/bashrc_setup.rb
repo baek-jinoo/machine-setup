@@ -17,6 +17,7 @@ end
 def install_bashrc
   colorize_log 'Installing bashrc'
   shell_cmd 'touch ~/.bashrc'
+  shell_cmd 'echo "if [ -f ~/.bashrc ]; then source ~/.bashrc; fi" >> ~/.bash_profile'
 end
 
 install_mybashrc
