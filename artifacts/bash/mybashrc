@@ -10,7 +10,7 @@ set -o vi
 export EDITOR='/usr/bin/vim'
 
 #Unix Commands
-alias ',,'='vim ~/.bashrc'
+alias ',,'='vim ~/.mybashrc'
 alias 'vi'='vim'
 
 alias tree='tree -C'
@@ -19,4 +19,5 @@ alias ss="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaver
 
 alias be='bundle exec'
 
-eval "$(pyenv init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

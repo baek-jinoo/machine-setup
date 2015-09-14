@@ -13,6 +13,12 @@ def install_vim_directory
   end
 end
 
+def install_vundle
+  if !File.directory?("#{ENV['HOME']}/.vim/bundle/Vundle.vim") then
+    shell_cmd "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+  end
+end
+
 def install_vimrc
   settings_destination_full_path = "#{ENV['HOME']}/.vimrc"
   colorize_log 'Attempting to install .vimrc'
@@ -26,3 +32,4 @@ end
 
 install_vim_directory
 install_vimrc
+install_vundle
