@@ -2,8 +2,11 @@
 
 require_relative 'shared'
 
+def settings_destination_full_path
+  "#{ENV['HOME']}/.vim"
+end
+
 def install_vim_directory
-  settings_destination_full_path = "#{ENV['HOME']}/.vim"
   colorize_log 'Attempting to install .vim directory'
   if !File.symlink?(settings_destination_full_path) && !File.directory?(settings_destination_full_path) then
     colorize_log 'Installing .vim directory'
@@ -13,14 +16,23 @@ def install_vim_directory
   end
 end
 
+def create_tmp_for_swp
+  tmp_full_path = "#{settings_destination_full_path}/tmp"
+
+  colorize_log 'Attempting to install swp tmp folder'
+  if !File.directory?(tmp_full_path) then
+    colorize_log "Installing swp tmp folder at #{tmp_full_path}"
+    shell_cmd "mkdir -p #{tmp_full_path}"
+  end
+end
+
 def install_vundle
-  if !File.directory?("#{ENV['HOME']}/.vim/bundle/Vundle.vim") then
-    shell_cmd "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+  if !File.directory?("#{settings_destination_full_path}/bundle/Vundle.vim") then
+    shell_cmd "git clone https://github.com/VundleVim/Vundle.vim.git #{settings_destination_full_path}/bundle/Vundle.vim"
   end
 end
 
 def install_vimrc
-  settings_destination_full_path = "#{ENV['HOME']}/.vimrc"
   colorize_log 'Attempting to install .vimrc'
   if !File.symlink?(settings_destination_full_path) && !File.exists?(settings_destination_full_path) then
     colorize_log 'Installing .vimrc'
@@ -33,3 +45,4 @@ end
 install_vim_directory
 install_vimrc
 install_vundle
+create_tmp_for_swp
