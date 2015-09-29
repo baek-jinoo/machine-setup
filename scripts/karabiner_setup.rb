@@ -1,12 +1,18 @@
 #!/usr/bin/env ruby
 
-#download karabiner
-file_name = 'Karabiner-10.6.0.dmg'
-temporary_file_location = "/tmp/#{file_name}"
-`rm -rf #{temporary_file_location}`
-`wget https://pqrs.org/osx/karabiner/files/#{file_name} -O #{temporary_file_location}`
-#install karabiner
+require_relative 'shared'
 
-`hdiutil mount #{temporary_file_location}`
-puts 'Install the pkg file'
+def install_karabiner
+  shell_cmd 'brew update'
+  colorize_log 'Installing Karabiner'
+  shell_cmd 'brew cask install karabiner'
+end
+
+def configure_karabiner
+  colorize_log 'Configuring Karabiner'
+  shell_cmd './scripts/karabiner/karabiner-config-import.sh'
+end
+
+install_karabiner
+configure_karabiner
 

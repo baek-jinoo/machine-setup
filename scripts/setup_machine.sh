@@ -6,3 +6,5 @@ ruby ./scripts/homebrew_setup.rb
 ./scripts/pyenv_setup.sh
 
 ruby ./scripts/setup_machine.rb
+
+./scripts/run_apple_scripts.sh
