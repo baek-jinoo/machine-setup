@@ -2,10 +2,16 @@
 
 require_relative 'shared'
 
+
 def install_karabiner
-  shell_cmd 'brew update'
   colorize_log 'Installing Karabiner'
-  shell_cmd 'brew cask install karabiner'
+  file_name = 'Karabiner-10.6.0.dmg'
+  temporary_file_location = "/tmp/#{file_name}"
+  `rm -rf #{temporary_file_location}`
+  `wget https://pqrs.org/osx/karabiner/files/#{file_name} -O #{temporary_file_location}`
+  #install karabiner
+  
+  `hdiutil mount #{temporary_file_location}`
 end
 
 def configure_karabiner

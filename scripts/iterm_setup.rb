@@ -8,6 +8,6 @@ settings_destination_full_path = "#{settings_destination_directory}/#{settings_f
 
 shell_cmd "mkdir #{settings_destination_directory}" unless File.exists?(settings_destination_directory)
 
-shell_cmd "ln -s #{Dir.pwd}/../artifacts/iterm/#{settings_file_name} #{settings_destination_full_path}" unless File.exists?(settings_destination_full_path)
+shell_cmd "ln -s #{Dir.pwd}/../artifacts/iterm/#{settings_file_name} #{settings_destination_full_path}" unless File.symlink?(settings_destination_full_path)
 
 red_log "Set '#{settings_destination_directory}/' in iTerm's Preferences -> General -> Preferences"

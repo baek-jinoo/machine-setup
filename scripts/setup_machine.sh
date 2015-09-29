@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -e
 
 ruby ./scripts/homebrew_setup.rb
 
@@ -7,4 +7,3 @@ ruby ./scripts/homebrew_setup.rb
 
 ruby ./scripts/setup_machine.rb
 
-./scripts/run_apple_scripts.sh

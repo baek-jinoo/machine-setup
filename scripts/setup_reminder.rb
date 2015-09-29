@@ -2,5 +2,5 @@
 
 require_relative 'shared'
 
-red 'Install flycut'
-red 'Install Dash from App Store'
+red_log 'Install flycut'
+red_log'Install Dash from App Store'
