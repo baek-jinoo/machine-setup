@@ -60,7 +60,7 @@ end
 
 def install_alcatraz
   colorize_log "Installing Alcatraz for Xcode"
-  shell_cmd 'curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh'
+  shell_cmd 'curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh'
 end
 
 #def install_dash
