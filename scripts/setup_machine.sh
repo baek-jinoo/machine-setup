@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-ruby ./homebrew_setup.rb
+ruby ./scripts/homebrew_setup.rb
 
-./rbenv_setup.sh
-./pyenv_setup.sh
+./scripts/rbenv_setup.sh
+./scripts/pyenv_setup.sh
 
-ruby ./setup_machine.rb
+ruby ./scripts/setup_machine.rb
