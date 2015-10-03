@@ -2,12 +2,6 @@
 
 require_relative 'shared'
 
-def clone_git_repository(repository_url, target_directory)
-  shell_cmd "mkdir -p #{target_directory}"
-  colorize_log "Cloning [#{repository_url}] into [#{target_directory}]"
-  shell_cmd "cd #{target_directory} && git clone #{repository_url}"
-end
-
 def install_gem(name)
   begin
     gem name
@@ -17,44 +11,31 @@ def install_gem(name)
   end
 end
 
-def install(name, target_directory, command)
-  current_directory = Dir.pwd
-  Dir.chdir "#{target_directory}/#{name}"
-  colorize_log "Installing #{name}"
-  shell_cmd command
-  Dir.chdir current_directory
-end
-
-def install_with_git_repository(name, repository_url, command)
-  target_directory = "/tmp/__installs/#{name}"
-  log "Clearing #{target_directory}"
-  shell_cmd "rm -rf #{target_directory}"
-  clone_git_repository(repository_url, target_directory)
-  install_gem('rake')
-  install(name, target_directory, command)
-end
-
 def install_cedar_shortcuts
   name = 'CedarShortcuts'
   repository_url = 'https://github.com/cppforlife/CedarShortcuts.git'
+  install_gem('rake')
   install_with_git_repository(name, repository_url, 'rake install')
 end
 
 def install_better_console
   name = 'BetterConsole'
   repository_url = 'https://github.com/cppforlife/BetterConsole.git'
+  install_gem('rake')
   install_with_git_repository(name, repository_url, 'rake install')
 end
 
 def install_xcode_preferences
   name = 'XcodePreferences'
   repository_url = 'https://github.com/baek-jinoo/XcodePreferences.git'
+  install_gem('rake')
   install_with_git_repository(name, repository_url, 'rake')
 end
 
 def install_appcode_preferences
   name = 'AppCodePreferences'
   repository_url = 'https://github.com/baek-jinoo/AppCodePreferences.git'
+  install_gem('rake')
   install_with_git_repository(name, repository_url, 'rake symlink:all')
 end
 
