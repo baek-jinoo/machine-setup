@@ -3,6 +3,11 @@
 require_relative 'shared'
 
 def install_dropbox
+  app_name = 'Dropbox'
+  if File.exists?("/Applications/#{app_name}.app") then
+    colorize_log "#{app_name} Already Installed"
+    return
+  end
   colorize_log 'Installing Dropbox'
   shell_cmd 'curl -Lo /tmp/Dropbox.dmg https://www.dropbox.com/download?plat=mac;'
   shell_cmd 'hdiutil attach /tmp/Dropbox.dmg;'
