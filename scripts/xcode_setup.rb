@@ -44,6 +44,11 @@ def install_alcatraz
   shell_cmd 'curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh'
 end
 
+def install_xcode_snippets
+  colorize_log "Installing Xcode snippets"
+  shell_cmd "cp #{File.expand_path(File.dirname(__FILE__))}/../artifacts/xcode_snippets/* ~/Library/Developer/Xcode/UserData/CodeSnippets"
+end
+
 #def install_dash
 #  colorize_log "Installing Dash"
 #  shell_cmd 'brew cask install dash'
@@ -54,4 +59,5 @@ install_better_console
 install_alcatraz
 install_xcode_preferences
 install_appcode_preferences
+install_xcode_snippets
 #install_dash
