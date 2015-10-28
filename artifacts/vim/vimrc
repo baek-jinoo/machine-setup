@@ -83,6 +83,8 @@ map <leader>tm :tabmove
 nnoremap <silent> <C-f>p     :FufFile<CR>
 nnoremap <silent> <C-f>b     :FufBuffer<CR>
 nnoremap <silent> <C-f>f     :FufCoverageFile<CR>
+nnoremap <silent> <C-f>r     :FufRenewCache<CR>
+
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>f :w<CR>:!./runner.sh<CR>
