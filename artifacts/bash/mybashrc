@@ -6,8 +6,6 @@ PATH=/usr/local/bin:$PATH
 #Change shell to vim mode
 set -o vi
 
-#Vim
-export EDITOR='/usr/bin/vim'
 
 #Unix Commands
 alias ',,'='vim ~/.mybashrc'
@@ -24,7 +22,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export WORKON_HOME=~/Envs
 
+#Vim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+echo 'bla'
 
 export DATABASE_URL=postgres:///$(whoami)
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin

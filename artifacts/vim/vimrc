@@ -4,39 +4,39 @@
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'L9'
+Plugin 'easymotion/vim-easymotion'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+"Plugin 'tpope/vim-surround'
+"Plugin 'scrooloose/syntastic'
+call vundle#end()
 
 set nocompatible                  " Must come first because it changes other options.
 "set autoindent
 "set sts=2
-"set tabstop=2
-set expandtab                    " Use spaces instead of tabs
+"set smartindent
+"set autoindent
+"set expandtab                    " Use spaces instead of tabs
 
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
-"silent! call pathogen#runtime_append_all_bundles()
-"
 set showmode                      " Display the mode you're in.
 
 set hidden                        " Handle multiple buffers better.
@@ -89,3 +89,4 @@ nnoremap <silent> <C-f>r     :FufRenewCache<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>f :w<CR>:!./runner.sh<CR>
 
+autocmd FileType ruby compiler ruby

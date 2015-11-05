@@ -66,8 +66,8 @@ def install_vimrc
 end
 
 install_macvim
-#install_vim_directory
-#install_vimrc
-#install_vundle
-#create_tmp_for_swp
+install_vim_directory
+install_vimrc
+install_vundle
+create_tmp_for_swp
 
