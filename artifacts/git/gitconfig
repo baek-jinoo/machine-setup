@@ -4,11 +4,11 @@
 [core]
         editor = vim
         whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/jin/.gitignore_global
 [web]
         browser = google-chrome
 [push]
-        default = matching
+	default = simple
 [color]
         ui = auto
 [color "branch"]
@@ -152,3 +152,11 @@
         wp = show -p
         wr = show -p --no-color
         #############
+[credential]
+	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
