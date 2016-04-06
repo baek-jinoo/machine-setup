@@ -25,11 +25,17 @@ def install_git_branch_autocomplete
   end
 end
 
+def install_git_with_brew
+  shell_cmd "brew update"
+  shell_cmd "brew install git"
+end
+
 def install_git_bash_prompt
   shell_cmd "brew update"
   shell_cmd "brew install bash-git-prompt"
 end
 
+install_git_with_brew
 install_gitconfig
 install_git_branch_autocomplete
 install_git_bash_prompt
