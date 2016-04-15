@@ -81,11 +81,11 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
 " FuzzyFinder
-nnoremap <silent> <C-f>f     :FufFile<CR>
+nnoremap <silent> <C-f>g     :FufFile<CR>
 nnoremap <silent> <C-f>b     :FufBuffer<CR>
 nnoremap <silent> <C-f>p     :FufCoverageFile<CR>
 nnoremap <silent> <C-f>r     :FufRenewCache<CR>
-
+nnoremap <silent> <C-f>f     :FufCoverageFile<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>f :w<CR>:!./runner.sh<CR>
