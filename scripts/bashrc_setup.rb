@@ -10,15 +10,8 @@ def install_mybashrc
     shell_cmd "ln -s #{File.expand_path(File.dirname(__FILE__))}/../artifacts/bash/mybashrc #{settings_destination_full_path}" 
     shell_cmd 'echo "if [ -f ~/.mybashrc ]; then source ~/.mybashrc; fi" >> ~/.bash_profile'
   else
-    colorize_log 'bashrc already installed'
+    colorize_log 'mybashrc already installed'
   end
 end
 
-def install_bashrc
-  colorize_log 'Installing bashrc'
-  shell_cmd 'touch ~/.bashrc'
-  shell_cmd 'echo "if [ -f ~/.bashrc ]; then source ~/.bashrc; fi" >> ~/.bash_profile'
-end
-
 install_mybashrc
-install_bashrc
