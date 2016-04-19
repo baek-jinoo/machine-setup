@@ -2,3 +2,5 @@
 .DS_Store
 Vundle.vim
 tmp
+
+artifacts/vim/vim/bundle
