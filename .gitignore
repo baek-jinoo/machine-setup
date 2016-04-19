@@ -3,4 +3,5 @@
 Vundle.vim
 tmp
 
-artifacts/vim/vim/bundle
+artifacts/vim/vim/bundle/*
+!artifacts/vim/vim/bundle/Vundle.vim

@@ -1,3 +1,6 @@
 [submodule "artifacts/vim/vim/bundle/vim-ruby"]
 	path = artifacts/vim/vim/bundle/vim-ruby
 	url = https://github.com/baek-jinoo/vim-ruby.git
+[submodule "artifacts/vim/vim/bundle/Vundle.vim"]
+	path = artifacts/vim/vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
