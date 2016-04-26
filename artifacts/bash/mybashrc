@@ -52,3 +52,6 @@ fi
 
 alias g=git
 __git_complete g __git_main
+
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=~/.gocode
