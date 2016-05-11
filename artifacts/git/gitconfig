@@ -68,8 +68,8 @@
         #############
         g = grep -p
         #############
-        l = log --oneline
-        lg = log --oneline --graph --decorate
+        l = log --full-history
+        lg = log --full-history --graph --decorate
         #############
         ls = ls-files
         lsf = "!git ls-files | grep -i"

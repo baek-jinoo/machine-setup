@@ -26,7 +26,7 @@ export WORKON_HOME=~/Envs
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
 
-export DATABASE_URL=postgres:///$(whoami)
+#export DATABASE_URL=postgres:///$(whoami)
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH="$HOME/.ndenv/bin:$PATH"
 if which nbenv > /dev/null; then eval "$(ndenv init -)"; fi
