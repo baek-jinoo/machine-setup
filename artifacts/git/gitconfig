@@ -152,6 +152,7 @@
         wp = show -p
         wr = show -p --no-color
         #############
+        su = submodule update --init --recursive
 [credential]
 	helper = osxkeychain
 [difftool "sourcetree"]
