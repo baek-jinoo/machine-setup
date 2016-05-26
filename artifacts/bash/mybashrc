@@ -55,3 +55,9 @@ __git_complete g __git_main
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=~/.gocode
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/jin/Downloads/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/jin/Downloads/google-cloud-sdk/completion.bash.inc'
