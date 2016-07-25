@@ -56,7 +56,14 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=~/.gocode
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/opt/google-cloud-sdk/path.bash.inc'
+GOOGLE_CLOUD_SDK_BASH_INC='/opt/google-cloud-sdk/path.bash.inc'
+if [ -f $GOOGLE_CLOUD_SDK_BASH_INC ]; then
+  source $GOOGLE_CLOUD_SDK_BASH_INC
+fi
 
 # The next line enables shell command completion for gcloud.
-source '/opt/google-cloud-sdk/completion.bash.inc'
+GOOGLE_CLOUD_SDK_COMPLETION_INC='/opt/google-cloud-sdk/completion.bash.inc'
+if [ -f $GOOGLE_CLOUD_SDK_COMPLETION_INC ]; then
+  source $GOOGLE_CLOUD_SDK_COMPLETION_INC
+fi
+
