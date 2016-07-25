@@ -19,6 +19,8 @@ alias b='bundle exec'
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which nbenv > /dev/null; then eval "$(ndenv init -)"; fi
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 export WORKON_HOME=~/Envs
 
@@ -26,12 +28,9 @@ export WORKON_HOME=~/Envs
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
 
-#export DATABASE_URL=postgres:///$(whoami)
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH="$HOME/.ndenv/bin:$PATH"
-if which nbenv > /dev/null; then eval "$(ndenv init -)"; fi
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home'
 export GRADLE_HOME='/usr/local/opt/gradle/gradle-2.11'
 export PATH=$PATH:$GRADLE_HOME/bin
 
