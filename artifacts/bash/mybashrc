@@ -31,7 +31,7 @@ export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH="$HOME/.ndenv/bin:$PATH"
 
-export GRADLE_HOME='/usr/local/opt/gradle/gradle-2.11'
+export GRADLE_HOME='/usr/local/opt/gradle'
 export PATH=$PATH:$GRADLE_HOME/bin
 
 alias s3jin='s3cmd -c ~/.s3cfg-jin'
