@@ -67,3 +67,13 @@ if [ -f $GOOGLE_CLOUD_SDK_COMPLETION_INC ]; then
   source $GOOGLE_CLOUD_SDK_COMPLETION_INC
 fi
 
+alias msx='~/machine-setup/scripts/xcode_setup.rb'
+
+
+export SPARK_KEY_PAIR_FILE=$HOME/.ssh/ll_jin.pem
+export SPARK_KEY_PAIR_NAME=ll_jin
+export SPARK_EMR_LOG_PATH=s3://lumos-data-dump-dev01/jin/logs
+export SPARK_CLUSTER_MASTER_SIZE=r3.2xlarge
+export SPARK_CLUSTER_INSTANCE_SIZE=r3.2xlarge
+export SPARK_CLUSTER_INSTANCE_COUNT=2
+export SPARK_DEFAULTS_FILE=https://s3.amazonaws.com/lumos-data-dump-dev01/jin/spark/config/emr-spark-defaults.json
