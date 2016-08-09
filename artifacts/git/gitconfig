@@ -153,7 +153,8 @@
         wp = show -p
         wr = show -p --no-color
         #############
-        su = submodule update --init --recursive
+        su = submodule update --init
+        sur = submodule update --init --recursive
 [credential]
 	helper = osxkeychain
 [merge]
