@@ -79,3 +79,7 @@ export SPARK_CLUSTER_MASTER_SIZE=r3.2xlarge
 export SPARK_CLUSTER_INSTANCE_SIZE=r3.2xlarge
 export SPARK_CLUSTER_INSTANCE_COUNT=2
 export SPARK_DEFAULTS_FILE=https://s3.amazonaws.com/lumos-data-dump-dev01/jin/spark/config/emr-spark-defaults.json
+
+alias axcodes_7_2='sudo xcode-select -s /Applications/Xcode_7_2.app/'
+alias axcodes_7_3_1='sudo xcode-select -s /Applications/Xcode_7_3_1.app/'
+alias axcodes_p='sudo xcode-select -p'
