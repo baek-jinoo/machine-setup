@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
-set -ex
+set -e
 
+SCRIPT_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+cd $SCRIPT_DIR
+
+echo "Check if git is clean for merge from master"
+git diff-index --quiet --cached HEAD
+git diff-files --quiet
+
+echo "Git is clean, proceeding..."
 git fetch
 git merge origin/master master --ff
 git checkout master
-
-source ~/.bash_profile &> /dev/null
+source ~/.bash_profile
 
