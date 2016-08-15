@@ -12,5 +12,7 @@ echo "Git is clean, proceeding..."
 git fetch
 git merge origin/master master --ff
 git checkout master
+
+echo "Source bash_profile"
 source ~/.bash_profile
 
