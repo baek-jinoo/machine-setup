@@ -83,3 +83,5 @@ export SPARK_DEFAULTS_FILE=https://s3.amazonaws.com/lumos-data-dump-dev01/jin/sp
 alias axcodes_7_2='sudo xcode-select -s /Applications/Xcode_7_2.app/'
 alias axcodes_7_3_1='sudo xcode-select -s /Applications/Xcode_7_3_1.app/'
 alias axcodes_p='sudo xcode-select -p'
+alias awl='cd ~/workspace/lumos/LumosityMobile/'
+alias agohero='cd ~/workspace/projects/GoHero'
