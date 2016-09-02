@@ -18,6 +18,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'L9'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'pangloss/vim-javascript'
 
 "Plugin 'tpope/vim-surround'
 "Plugin 'scrooloose/syntastic'

@@ -2,6 +2,7 @@
 PATH=$PATH:$HOME/bin
 PATH=/usr/local/sbin:$PATH
 PATH=/usr/local/bin:$PATH
+export PATH="$HOME/.ndenv/bin:$PATH"
 
 #Change shell to vim mode
 set -o vi
@@ -17,6 +18,7 @@ alias ss="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaver
 
 alias b='bundle exec'
 
+
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which ndenv > /dev/null; then eval "$(ndenv init -)"; fi
@@ -31,7 +33,6 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-export PATH="$HOME/.ndenv/bin:$PATH"
 
 export GRADLE_HOME='/usr/local/opt/gradle'
 export PATH=$PATH:$GRADLE_HOME/bin
@@ -50,6 +51,7 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     source `brew --prefix`/etc/bash_completion
 fi
+if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 
 alias g=git
 __git_complete g __git_main
@@ -71,7 +73,6 @@ fi
 
 alias msx='~/machine-setup/scripts/xcode_setup.rb'
 
-
 export SPARK_KEY_PAIR_FILE=$HOME/.ssh/ll_jin.pem
 export SPARK_KEY_PAIR_NAME=ll_jin
 export SPARK_EMR_LOG_PATH=s3://lumos-data-dump-dev01/jin/logs
@@ -85,3 +86,5 @@ alias axcodes_7_3_1='sudo xcode-select -s /Applications/Xcode_7_3_1.app/'
 alias axcodes_p='sudo xcode-select -p'
 alias awl='cd ~/workspace/lumos/LumosityMobile/'
 alias agohero='cd ~/workspace/projects/GoHero'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
