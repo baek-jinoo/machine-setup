@@ -1,5 +1,5 @@
 [user]
-        name = Jinoo Baek
+        name = Jinwoo Baek
         email = baek32jinoo@gmail.com
 [core]
         editor = vim
@@ -169,3 +169,5 @@
     tool = p4merge
 [difftool "p4merge"]
   cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+[commit]
+	gpgsign = true
