@@ -87,6 +87,8 @@ alias axcodes_8_0='sudo xcode-select -s /Applications/Xcode_8_0.app/'
 alias axcodes_p='sudo xcode-select -p'
 alias awl='cd ~/workspace/lumos/LumosityMobile/'
 alias agohero='cd ~/workspace/projects/GoHero'
+alias asearch='cd /Users/jin/workspace/learning/udacity/aind/search'
+alias aaind='cd /Users/jin/workspace/learning/udacity/aind'
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -100,3 +102,6 @@ export HISTTIMEFORMAT="%m/%d/%y %T "
 export HISTCONTROL=ignoreboth:erasedups # ignore commands starting with a space, and ignore duplicates
 
 alias tgb='git symbolic-ref --short HEAD'
+
+ssh-add ~/.ssh/id_rsa2
+export GPG_TTY=$(tty)

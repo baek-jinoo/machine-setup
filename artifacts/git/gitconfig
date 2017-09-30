@@ -1,7 +1,7 @@
 [user]
         name = Jinwoo Baek
         email = baek32jinoo@gmail.com
-	signingkey = D22876B3C95E2A65
+	signingkey = E649654A8F52C4A3
 [core]
         editor = vim
         whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -129,7 +129,6 @@
         ra = remote add
         rr = remote rm
         rv = remote -v
-        rm = remote rename
         rp = remote prune
         rs = remote show
         rao = remote add origin

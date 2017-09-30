@@ -29,7 +29,7 @@ set nocompatible                  " Must come first because it changes other opt
 "set sts=2
 "set smartindent
 "set autoindent
-"set expandtab                    " Use spaces instead of tabs
+set expandtab                    " Use spaces instead of tabs
 
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
