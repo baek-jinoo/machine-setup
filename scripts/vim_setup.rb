@@ -2,15 +2,15 @@
 
 require_relative 'shared'
 
-def install_macvim
-  name = 'macvim'
-  app_destination_full_path = '/Applications/MacVim.app'
+def install_vim
+  name = 'vim'
+  app_destination_full_path = "/usr/loca/bin/#{name}"
   if File.symlink?(app_destination_full_path) || File.exist?(app_destination_full_path) then
     colorize_log "#{name} already installed"
     return
   end
   colorize_log "Attempting to install #{name}"
-  repository_url = 'git://github.com/b4winckler/macvim.git'
+  repository_url = 'https://github.com/vim/vim.git'
   command = 'cd src && \
              ./configure --prefix=/usr/local \
               --with-features=huge \
@@ -19,7 +19,7 @@ def install_macvim
               --enable-perlinterp \
               --enable-cscope && \
              make && \
-             mv MacVim/build/Release/MacVim.app /Applications/'
+             mv vim /usr/local/bin/vim'
   install_with_git_repository(name, repository_url, command)
   colorize_log "Successfully installed #{name}"
 end
@@ -65,7 +65,7 @@ def install_vimrc
   end
 end
 
-install_macvim
+install_vim
 install_vim_directory
 install_vimrc
 install_vundle

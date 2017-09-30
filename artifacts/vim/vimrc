@@ -4,25 +4,6 @@
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'L9'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'pangloss/vim-javascript'
-
-"Plugin 'tpope/vim-surround'
-"Plugin 'scrooloose/syntastic'
-call vundle#end()
 
 set nocompatible                  " Must come first because it changes other options.
 "set autoindent
@@ -62,8 +43,6 @@ set title                         " Set the terminal's title
 
 set visualbell                    " No beeping.
 
-set swapfile
-set dir=~/.vim/tmp
 set backspace=indent,eol,start
 let mapleader=","
 
