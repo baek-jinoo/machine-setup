@@ -30,8 +30,7 @@ if which sbtenv > /dev/null; then eval "$(sbtenv init -)"; fi
 export WORKON_HOME=~/Envs
 
 #Vim
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'
+export EDITOR='vim'
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
