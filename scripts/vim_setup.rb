@@ -3,23 +3,25 @@
 require_relative 'shared'
 
 def install_vim
-  name = 'vim'
-  app_destination_full_path = "/usr/loca/bin/#{name}"
+  name = 'macvim'
+  app_destination_full_path = '/Applications/MacVim.app'
   if File.symlink?(app_destination_full_path) || File.exist?(app_destination_full_path) then
     colorize_log "#{name} already installed"
     return
   end
   colorize_log "Attempting to install #{name}"
-  repository_url = 'https://github.com/vim/vim.git'
-  command = 'cd src && \
+  repository_url = 'https://github.com/macvim-dev/macvim.git'
+  command = 'git checkout snapshot-137 &&\
+             cd src && \
              ./configure --prefix=/usr/local \
               --with-features=huge \
               --enable-rubyinterp \
               --enable-pythoninterp \
+              --enable-python3interp=yes \
               --enable-perlinterp \
               --enable-cscope && \
              make && \
-             mv vim /usr/local/bin/vim'
+             mv MacVim/build/Release/MacVim.app /Applications/'
   install_with_git_repository(name, repository_url, command)
   colorize_log "Successfully installed #{name}"
 end
