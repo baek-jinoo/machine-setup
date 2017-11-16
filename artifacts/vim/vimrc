@@ -12,6 +12,7 @@ set nocompatible                  " Must come first because it changes other opt
 "set autoindent
 set expandtab                    " Use spaces instead of tabs
 
+set noswapfile
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -73,3 +74,6 @@ map <C-n> :NERDTreeToggle<CR>
 map <Leader>f :w<CR>:!./runner.sh<CR>
 
 autocmd FileType ruby compiler ruby
+
+let g:fzf_layout = { 'down': '~20%' }
+:map <Leader>t :FZF<CR>
