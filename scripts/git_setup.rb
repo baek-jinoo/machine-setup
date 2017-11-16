@@ -37,7 +37,7 @@ end
 
 def install_git_bash_completion
   shell_cmd "brew update"
-  shell_cmd "brew install bash-completion"
+  shell_cmd "brew install --overwrite bash-completion"
 end
 
 install_git_with_brew
