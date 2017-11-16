@@ -4,3 +4,6 @@
 [submodule "artifacts/vim/vim/bundle/Vundle.vim"]
 	path = artifacts/vim/vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "artifacts/vim/vim/pack/plugins/start/fzf"]
+	path = artifacts/vim/vim/pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf.git
