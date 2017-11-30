@@ -2,11 +2,11 @@
 execute
 
 ```
-./scripts/setup_machine.sh
+./scripts/machine_setup.sh
 ```
 
 Then execute
 
 ```
-./scripts/post_setup_machine.rb
+./scripts/post_machine_setup.rb
 ```
