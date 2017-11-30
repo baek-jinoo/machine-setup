@@ -2,6 +2,20 @@
 
 require_relative 'shared'
 
+def setup_karabiner_config
+  destination_folder = "#{ENV['HOME']}/.config/karabiner"
+  file_name = "karabiner.json"
+  destination_file = "#{destination_folder}/#{file_name}"
+
+  if !File.symlink?(destination_folder) && !File.directory?(destination_folder) then
+    shell_cmd "mkdir -p #{destination_folder} || true"
+  end
+
+  if !File.symlink?(destination_file) && !File.directory?(destination_file) then
+    shell_cmd "mv #{destination_file} #{destination_file}.bak.$(date +%Y%m%d_%H%M%S)"
+    shell_cmd "ln -s #{File.expand_path(File.dirname(__FILE__))}/../artifacts/karabiner.json #{destination_file}" 
+  end
+end
 
 def install_karabiner
   app_name = 'Karabiner'
@@ -30,7 +44,9 @@ def configure_karabiner
   shell_cmd './scripts/karabiner/karabiner-config-import.sh'
 end
 
-install_karabiner
-configure_karabiner
-red_log 'Enable Accessibility by Opening Karabiner'
+#install_karabiner
+#configure_karabiner
+#red_log 'Enable Accessibility by Opening Karabiner'
+
+setup_karabiner_config
 
