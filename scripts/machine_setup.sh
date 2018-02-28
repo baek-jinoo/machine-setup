@@ -7,3 +7,5 @@ ruby ./scripts/homebrew_setup.rb
 
 ruby ./scripts/machine_setup.rb
 
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "`pwd`/artifacts/iterm"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
