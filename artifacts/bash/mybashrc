@@ -2,7 +2,6 @@
 PATH=$PATH:$HOME/bin
 PATH=/usr/local/sbin:$PATH
 PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.ndenv/bin:$PATH"
 
 #Change shell to vim mode
 #set -o vi
@@ -23,7 +22,7 @@ alias b='bundle exec'
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which ndenv > /dev/null; then eval "$(ndenv init -)"; fi
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 if which scalaenv > /dev/null; then eval "$(scalaenv init -)"; fi
 if which sbtenv > /dev/null; then eval "$(sbtenv init -)"; fi
@@ -82,16 +81,10 @@ export SPARK_CLUSTER_INSTANCE_SIZE=r3.2xlarge
 export SPARK_CLUSTER_INSTANCE_COUNT=2
 export SPARK_DEFAULTS_FILE=https://s3.amazonaws.com/lumos-data-dump-dev01/jin/spark/config/emr-spark-defaults.json
 
-alias axcodes_7_2='sudo xcode-select -s /Applications/Xcode_7_2.app/'
-alias axcodes_7_3_1='sudo xcode-select -s /Applications/Xcode_7_3_1.app/'
-alias axcodes_8_0='sudo xcode-select -s /Applications/Xcode_8_0.app/'
 alias axcodes_p='sudo xcode-select -p'
 alias awlm='cd ~/workspace/lumos/LumosityMobile/'
 alias awlr='cd ~/workspace/lumos/lumos_rails/'
-alias agohero='cd ~/workspace/projects/GoHero'
-alias asearch='cd /Users/jin/workspace/learning/udacity/aind/search'
-alias aaind='cd /Users/jin/workspace/learning/udacity/aind'
-alias adog='cd /Users/jin/workspace/learning/udacity/aind/dog-project'
+alias awmi='cd ~/workspace/lumos/mindfulness-ios/'
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -109,3 +102,5 @@ if [ -f '/Users/jin/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/U
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jin/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/jin/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+export PS1="\$? \u \[\033[38;5;50m\]\w\[\033[38;5;15m\]\n\d \T\[\033[38;5;82m\]\n\W \\$ \[$(tput sgr0)\]"
