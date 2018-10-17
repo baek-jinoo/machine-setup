@@ -85,6 +85,8 @@ alias axcodes_p='sudo xcode-select -p'
 alias awlm='cd ~/workspace/lumos/LumosityMobile/'
 alias awlr='cd ~/workspace/lumos/lumos_rails/'
 alias awmi='cd ~/workspace/lumos/mindfulness-ios/'
+alias awma='cd ~/workspace/lumos/mindfulness-api/'
+alias awmb='cd ~/workspace/lumos/mindfulness_backend/'
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -103,4 +105,5 @@ if [ -f '/Users/jin/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/U
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jin/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/jin/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
-export PS1="\$? \u \[\033[38;5;50m\]\w\[\033[38;5;15m\]\n\d \T\[\033[38;5;82m\]\n\W \\$ \[$(tput sgr0)\]"
+export PS1="\$? \h\[$(tput sgr0)\] \u \[\033[38;5;50m\]\w\[\033[38;5;15m\]\n\d \T\[\033[38;5;82m\]\n\W \\$ \[$(tput sgr0)\]"
+
