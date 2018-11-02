@@ -98,6 +98,7 @@ ssh-add ~/.ssh/id_rsa2 > /dev/null 2>&1 || true
 export GPG_TTY=$(tty)
 export PATH="/usr/local/opt/percona-server@5.6/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH=$(go env GOPATH)/bin:$PATH
 eval "$(nodenv init -)"
 
 export EJSON_KEYDIR=~/.ejson
@@ -112,3 +113,20 @@ if [ -f '~/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '~/Dow
 
 export PS1="\$? \h\[$(tput sgr0)\] \u \[\033[38;5;50m\]\w\[\033[38;5;15m\]\n\d \T\[\033[38;5;82m\]\n\W \\$ \[$(tput sgr0)\]"
 
+switchk8s() {
+ OLDNEW=$1
+ 
+ if [ -z "$OLDNEW" ]; then
+   echo "Submit either old or new. e.g. 'switchk8s old'"
+ elif [ $OLDNEW = "old" ]; then
+   echo "OLD kubectl(1.7.11) in effect"
+   rm /usr/local/bin/kubectl
+   ln -vs $HOME/bin/kubectl-1.7.11 /usr/local/bin/kubectl
+   export KUBECONFIG=~/.kube/old_config
+ elif [ $OLDNEW = "new" ]; then
+   echo "NEW kubectl(1.11.0) in effect"
+   rm /usr/local/bin/kubectl
+   ln -vs $HOME/bin/kubectl-1.11.0 /usr/local/bin/kubectl
+   export KUBECONFIG=~/.kube/eks_config
+ fi
+}
