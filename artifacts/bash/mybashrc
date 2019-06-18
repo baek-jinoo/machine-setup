@@ -26,20 +26,15 @@ if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 if which scalaenv > /dev/null; then eval "$(scalaenv init -)"; fi
 if which sbtenv > /dev/null; then eval "$(sbtenv init -)"; fi
+export PATH="${HOME}/.sbtenv/bin:${PATH}"
 
 export WORKON_HOME=~/Envs
 
 #Vim
 export EDITOR='vim'
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-
 export GRADLE_HOME='/usr/local/opt/gradle'
 export PATH=$PATH:$GRADLE_HOME/bin
-
-alias s3jin='s3cmd -c ~/.s3cfg-jin'
-alias s3green='s3cmd -c ~/.s3cfg-greenfield'
-
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.5.1

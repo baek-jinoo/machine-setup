@@ -169,10 +169,6 @@
     tool = p4merge
 [difftool "p4merge"]
   cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg2
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
