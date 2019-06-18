@@ -11,7 +11,7 @@ def install_vim
   end
   colorize_log "Attempting to install #{name}"
   repository_url = 'https://github.com/macvim-dev/macvim.git'
-  command = 'git checkout snapshot-146 &&\
+  command = 'git checkout snapshot-156 &&\
              cd src && \
              ./configure --prefix=/usr/local \
               --with-features=huge \
