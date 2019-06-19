@@ -90,6 +90,7 @@ alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias tgb='git symbolic-ref --short HEAD'
 
 ssh-add ~/.ssh/id_rsa2 > /dev/null 2>&1 || true
+ssh-add ~/.ssh/id_rsa_qz > /dev/null 2>&1 || true
 export GPG_TTY=$(tty)
 export PATH="/usr/local/opt/percona-server@5.6/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
