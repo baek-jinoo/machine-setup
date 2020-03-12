@@ -27,6 +27,7 @@
         changed = yellow bold
         untracked = red bold
 [alias]
+        up = !git pull --prune && git submodule update --init --recursive
         a = add --all
         ai = add -i
         ap = add -p

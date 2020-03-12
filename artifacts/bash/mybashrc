@@ -24,6 +24,7 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+if which jenv > /dev/null; then jenv enable-plugin export; fi
 if which scalaenv > /dev/null; then eval "$(scalaenv init -)"; fi
 if which sbtenv > /dev/null; then eval "$(sbtenv init -)"; fi
 export PATH="${HOME}/.sbtenv/bin:${PATH}"
@@ -108,3 +109,7 @@ if [ -f '~/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '~/Downloads/goog
 if [ -f '~/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '~/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 export PS1="\$? \h\[$(tput sgr0)\] \u \[\033[38;5;50m\]\w\[\033[38;5;15m\]\n\d \T\[\033[38;5;82m\]\n\W \\$ \[$(tput sgr0)\]"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+export PATH=/opt/apache-maven-3.6.1/bin:$PATH
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
